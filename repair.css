@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.section__padding {
+  padding: 4rem 6rem;
+}
+.hi {
+  position: relative;
+}
+.hi > img {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.content1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.content1 > h1 {
+  color: var(--text-color);
+  font-size: 4rem;
+  line-height: 84px;
+  font-weight: 600;
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 2rem;
+}
+
+.content1 > button {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--secound-color);
+  border: none;
+  padding: 16px 16px;
+  width: max-content;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.content1 > button:hover {
+  background-color: var(--main-color);
+}
+
+.content2 {
+  position: relative;
+}
+.content2-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content2-heading > h2 {
+  font-size: 2.7rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.content2-heading > p {
+  text-align: center;
+  max-width: 680px;
+  width: 100%;
+  color: var(--other-color);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.grid-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-gap: 4rem;
+  margin-top: 4rem;
+}
+.grid-item {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.grid-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.075);
+}
+.grid-item > img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.gird-content {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.gird-content > p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+.gird-content > a {
+  font-size: 2.5rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  color: var(--secound-color);
+  transition: all 0.3s;
+}
+.gird-content > a:hover {
+  color: var(--main-color);
+}
+.content3 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+.all {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.all > h3 {
+  font-size: 2.7rem;
+  padding: 1rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  text-align: center;
+  color: var(--secound-color);
+}
+.all > p {
+  padding: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.all > button {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1rem;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--secound-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.all > button:hover {
+  background-color: var(--main-color);
+}
+.image {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+.image > img {
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .content1 > h1 {
+    font-size: 2.7rem;
+    line-height: 52px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .content3 {
+    flex-direction: column;
+  }
+  .content3 > .all > button {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 790px) {
+  .content1 {
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .section__padding {
+    padding: 2rem 1rem;
+  }
+}

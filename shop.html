@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="shop.css" />
+  <script src="shop.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="shop-heading">
+    <img src="./assets/images/shop/heading/heading.jpg" alt="alberto" />
+    <div class="heading-content">
+      <h3>Watches</h3>
+      <p>Time with Perfection</p>
+    </div>
+  </div>
+  <section class="section__padding">
+    <div class="page-content">
+      <div class="list-product">
+        <div class="sort-product">
+          <div ng-click="sideBar()" class="view-list">
+            <i class="bx bx-sidebar"></i>
+          </div>
+
+          <div class="sort-list">
+            <select name="orderby">
+              <option value="popularity">Sort by popularity</option>
+              <option value="price">Sort by price: low to high</option>
+              <option value="price-desc">Sort by price: high to low</option>
+            </select>
+          </div>
+
+
+        </div>
+        <div class="list-items" id="placeholder">
+          <div item class="item" ng-repeat="data in paginatedItems | filter : search | filter: watchType ">
+            <img src="{{data.imgS}}" alt="alberto" ng-click="gotoProduct(data.name)" />
+            <div class="item-rating">
+              <p>-5%</p>
+              <i item-heart class="bx bx-heart"></i>
+            </div>
+            <div class="item-content">
+              <h3>{{data.name}}</h3>
+              <h4>{{data.brand}}</h4>
+              <p>${{data.price}}</p>
+              <li><a ng-click="AddToCard(data.name)">ADD TO CART</a></li>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <div ng-repeat="button in buttons">
+            <a ng-class="{'active': $first}" class="page-button" filter-pagination
+              ng-click="DisplayList(button.no)">{{button.no}}</a>
+          </div>
+        </div>
+      </div>
+      <div side-bar class="sidebar">
+        <div ng-click="CloseBar()" class=" sidebar-close">
+          <i class="bx bx-x"></i>
+        </div>
+        <div class="search">
+          <input ng-model="search" type="text" placeholder="Search for products..." />
+          <a href="#"><i class="bx bx-search"></i></a>
+        </div>
+        <div class="shopping-cart">
+          <h4>Shopping Cart</h4>
+          <p class="cart-alert">You have <span>({{carts.length}})</span> items in Cart:</p>
+          <div class="cart" ng-repeat="cart in carts">
+            <div class="cart-btn">
+              <i ng-click="removeCart(cart.name)" class="bx bx-x"></i>
+            </div>
+            <div class="cart-data">
+              <img src={{cart.img}} alt="cart">
+              <h5>{{cart.name}}</h5>
+            </div>
+            <div class="cart-price">
+              <p>Price: <span>${{cart.price}}</span></p>
+              <div class="quantity">
+                <span>Quantity: </span> <input ng-model=cart.quantity ng-change="getTotal()" type="number" min="1"
+                  max="20" value={{cart.quantity}} oninput="validity.valid||(value=1);">
+              </div>
+            </div>
+            <div>
+            </div>
+          </div>
+          <h4>Total: ${{total}}</h4>
+
+        </div>
+        <div class="categories">
+          <div class="category">
+            <h4>All Watches</h4>
+            <li><a filter-watch ng-click="MyFilter('')">ALL</a></li>
+          </div>
+          <div class="category">
+            <h4>By Brand</h4>
+            <li><a filter-watch ng-click="MyFilter('ROLEX')">ROLEX</a></li>
+            <li><a filter-watch ng-click="MyFilter('HUBLOT')">HUBLOT</a></li>
+            <li>
+              <a filter-watch ng-click="MyFilter('CITIZEN')">CITIZEN</a>
+            </li>
+            <li>
+              <a filter-watch ng-click="MyFilter('PATEK')">PATEK PHILIPPE</a>
+            </li>
+            <li><a filter-watch ng-click="MyFilter('MOVADO')">MOVADO</a></li>
+            <li>
+              <a filter-watch ng-click="MyFilter('KORS')">MICHAEL KORS
+              </a>
+            </li>
+            <li>
+              <a filter-watch ng-click="MyFilter('VACHERON')">VACHERON CONSTANTAIN</a>
+            </li>
+            <li><a filter-watch ng-click="MyFilter('OMEGA')">OMEGA</a></li>
+            <li>
+              <a filter-watch ng-click="MyFilter('BREITLING')">BREITLING</a>
+            </li>
+            <li>
+              <a filter-watch ng-click="MyFilter('HEUER')">TAG HEUER</a>
+            </li>
+            <li>
+              <a filter-watch ng-click="MyFilter('MONTBLANC')">MONTBLANC</a>
+            </li>
+          </div>
+
+          <div class="category">
+            <h4>By Style</h4>
+            <li>
+              <a filter-watch ng-click="MyFilter('AUTOMATIC')">AUTOMATIC WATCH</a>
+            </li>
+            <li>
+              <a filter-watch ng-click="MyFilter('DIGITAL')">DIGITAL WATCH</a>
+            </li>
+            <li>
+              <a filter-watch ng-click="MyFilter('SPORT')">SPORT WATCH</a>
+            </li>
+            <li>
+              <a filter-watch ng-click="MyFilter('SMART')">SMART WATCH</a>
+            </li>
+          </div>
+
+          <div class="category">
+            <h4>By Class</h4>
+            <li>
+              <a filter-watch ng-click="MyFilter('VINTAGE')">VINTAGE</a>
+            </li>
+            <li><a filter-watch ng-click="MyFilter('LUXURY')">LUXURY</a></li>
+            <li><a filter-watch ng-click="MyFilter('CASUAL')">FASHION</a></li>
+          </div>
+          <div class="category">
+            <h4>By Gender</h4>
+            <li><a filter-watch ng-click="MyFilter('MEN')">MEN'S</a></li>
+            <li>
+              <a filter-watch ng-click="MyFilter('LADDIES')">WOMEN'S</a>
+            </li>
+            <li><a filter-watch ng-click="MyFilter('UNISEX')">UNISEX</a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

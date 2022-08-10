@@ -1,0 +1,172 @@
+.section__padding {
+  margin-top: 65px;
+  padding: 4rem 4rem;
+}
+.appraisal {
+  padding: 0 15%;
+}
+.appraisal > h2 {
+  font-size: 3.7rem;
+  font-weight: 600;
+  color: var(--secound-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.appraisal > img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5rem;
+}
+.appraisal > p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  line-height: 28px;
+  margin-bottom: 2rem;
+  text-indent: 2rem;
+  color: var(--other-color);
+}
+.appraisal-box {
+  margin-top: 5rem;
+  padding: 3rem;
+  position: relative;
+  border: 2px solid var(--main-color);
+  border-radius: 50px;
+}
+.appraisal-sticker {
+  position: absolute;
+  background-color: var(--main-color);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(30deg);
+  top: -80px !important;
+  right: 80px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.appraisal-sticker > p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+}
+.appraisal-sticker > p > span {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+}
+.appraisal-box > h3 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: var(--secound-color);
+  margin-top: 2rem;
+}
+.appraisal-box > p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--other-color);
+  margin-bottom: 3rem;
+}
+.appraisal-method {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  grid-gap: 1rem;
+}
+.step {
+  position: relative;
+  background-color: var(--item-bg-color);
+  padding-bottom: 2rem;
+  border-radius: 50px;
+  flex-basis: calc(32%);
+  max-width: 320px;
+  width: 100%;
+}
+.step > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-bottom: 2rem;
+}
+.step > h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--secound-color);
+  margin-bottom: 1rem;
+}
+.step > p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--other-color);
+  text-align: center;
+}
+.appraisal-btn {
+  margin-top: 3rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appraisal-btn > a {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  color: var(--main-color);
+  padding: 14px 16px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  transition: ease-out 0.3s;
+}
+.appraisal-btn:hover > a {
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+@media screen and (max-width: 1350px) {
+  .appraisal {
+    padding: 0 5rem;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .appraisal {
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 890px) {
+  .appraisal {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 590px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  .appraisal-method {
+    justify-content: center;
+  }
+  .appraisal-box {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .section__padding {
+    padding: 4rem 1rem;
+  }
+  .appraisal-method {
+    justify-content: center;
+  }
+  .appraisal-box {
+    padding: 1rem;
+  }
+}

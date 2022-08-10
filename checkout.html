@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css" type="text/css">
+</head>
+
+<body>
+    <div class="shop-heading">
+        <img src="./assets/images/shop/heading/heading.jpg" alt="alberto" />
+        <div class="heading-content">
+            <h3>Check out</h3>
+            <p>Time with Perfection</p>
+        </div>
+    </div>
+    <section class="section__padding">
+        <div class="check-out-container">
+            <form>
+                <div class="billing-details">
+                    <h3>Billing Details</h3>
+                    <div class="order-name">
+                        <input type="text" placeholder="First Name" required="required">
+                        <input type=" text" placeholder="Last Name">
+                    </div>
+                    <input type="text" placeholder="Company Name" required="required">
+                    <input type="text" placeholder="Your Address" required="required">
+                    <input type="text" placeholder="Town/City" required="required">
+                    <input placeholder="Phone Number" required="required" type="tel"
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <input type="email" placeholder="Email" required="required">
+                    <input type="textarea" placeholder="Your note (optional)">
+                </div>
+                <div class="order">
+                    <h3>Your Order</h3>
+                    <p>You have chosen {{carts.length}} items: </p>
+                    <div ng-repeat="cart in carts" class="ordered-item">
+                        <div class="cart-btn">
+                            <i ng-click="removeCart(cart.name)" class="bx bx-x"></i>
+                        </div>
+                        <div class="ordered-item-detail">
+                            <img src="{{cart.img}}" alt="cart">
+                            <h4>{{cart.name}}</h4>
+                        </div>
+                        <div class="ordered-item-quantity">
+                            <p>Price: ${{cart.price}}</p>
+                            <div>
+                                <span>Quantity: </span> <input ng-model=cart.quantity ng-change="getTotal()"
+                                    type="number" min="1" max="5" value={{cart.quantity}}
+                                    oninput="validity.valid||(value=1);">
+                            </div>
+                            <div>
+                                <p>Subtotal: ${{cart.subtotal}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check-out">
+                        <h4>Payment Method</h4>
+                        <fieldset>
+                            <div class="payment-method">
+                                <input id="Paypal" name="method" type="radio" value="Paypal">
+                                <label for="Paypal">Paypal</label>
+                            </div>
+                            <div class="payment-method">
+                                <input id="HomeDelivery" name="method" type="radio" value="HomeDelivery">
+                                <label for="HomeDelivery">Home Delivery</label>
+                            </div>
+                            <div class="payment-method">
+                                <input id="CreditCart" name="method" type="radio" value="CreditCart">
+                                <label for="CreditCart">Credit Cart</label>
+                            </div>
+                        </fieldset>
+
+                        <div class="total-order">
+                            <h3>Total: ${{total}}</h3>
+                            <p>
+                                Your personal data will be used to process your order, support your experience
+                                throughout
+                                this website, and for other purposes described in our <a href="#">privacy policy</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-btn">
+                    <button type="submit">PLACE ORDER</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
