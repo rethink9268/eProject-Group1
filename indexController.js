@@ -109,6 +109,9 @@ app.config(function ($routeProvider) {
     })
     .when("/repair", {
       templateUrl: "repair.html",
+    })
+    .when("/about", {
+      templateUrl: "history.html",
     });
 });
 

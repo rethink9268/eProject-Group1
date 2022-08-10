@@ -205,7 +205,7 @@ header {
 }
 .alberto_navBar-account > div {
   position: relative;
-  margin-left: 28px;
+  margin-left: 16px;
 }
 .alberto_navBar-account > div > a {
   font-family: "Karla", sans-serif;
@@ -871,7 +871,7 @@ footer {
     display: none;
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 590px) {
   .alberto__navBar-signIn {
     display: flex;
   }
