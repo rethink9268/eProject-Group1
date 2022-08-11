@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+.section__padding {
+  margin-top: 65px;
+  padding: 4rem 6rem;
+}
+.shop-heading {
+  margin-top: 65px;
+  position: relative;
+  width: 100%;
+  height: 35vh;
+}
+.shop-heading > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heading-content {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+}
+.heading-content > h3 {
+  text-align: center;
+  font-size: 3.7rem;
+  font-weight: 600;
+  font-family: "Cormorant SC", serif;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+.heading-content > p {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #afafaf;
+  font-family: "Libre Baskerville", serif;
+}
+.history-intro {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.history-intro > .image {
+  position: relative;
+  display: flex;
+  flex: 1;
+  margin-right: 2rem;
+}
+.history-intro > .image > img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.history-intro > .content {
+  position: relative;
+  flex: 1;
+}
+.history-intro > .content > h3 {
+  text-align: left;
+  font-size: 2.7rem;
+  font-weight: 600;
+  font-family: "Libre Baskerville", serif;
+  line-height: 64px;
+  color: var(--secound-color);
+  padding-left: 2rem;
+}
+.history-intro > .content > p {
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--other-color);
+  padding-left: 2rem;
+}
+/*History Counter */
+.history_count {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--item-bg-color);
+  padding: 4rem 0;
+  margin-top: 6rem;
+}
+.count {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.count > h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.7rem;
+  color: var(--secound-color);
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+.count > p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--other-color);
+  letter-spacing: 0.5px;
+}
+.professionals {
+  position: relative;
+  margin-top: 6rem;
+}
+.profess_heading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.profess_heading > h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.7rem;
+  color: var(--secound-color);
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.profess_heading > p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--other-color);
+  letter-spacing: 0.5px;
+  text-align: center;
+  max-width: 840px;
+  width: 100%;
+}
+.profess_image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-gap: 0.5rem;
+  justify-content: center;
+}
+.person {
+  position: relative;
+  cursor: pointer;
+  transition: ease 0.35s;
+}
+
+.person > img {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.person_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(175, 127, 102, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  opacity: 0;
+  transition: ease 0.35s;
+}
+.person-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: ease 0.5s;
+}
+.person-text > h4 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.1rem;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.person-text > p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--item-bg-color);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.person:hover > .person_info {
+  opacity: 1;
+}
+.person:hover > .person_info > .person-text {
+  transform: translateY(-42px);
+}
+.drop_line {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  width: 100%;
+  max-width: 640px;
+}
+.drop_line > * {
+  margin-bottom: 1rem;
+}
+.drop_line > input {
+  font-size: 1rem;
+  width: 100%;
+  font-weight: 400;
+  background-color: var(--item-bg-color);
+  letter-spacing: 0.5px;
+  padding: 1rem;
+  height: 120px;
+  border: 2px solid var(--main-color);
+  outline: none;
+}
+.drop_line > h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.7rem;
+  color: var(--secound-color);
+  letter-spacing: 0.5px;
+}
+.customer_info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.customer_info > input {
+  font-size: 1rem;
+  width: 100%;
+  font-weight: 400;
+  background-color: var(--item-bg-color);
+  letter-spacing: 0.5px;
+  padding: 1rem;
+  border: 2px solid var(--main-color);
+  outline: none;
+}
+.customer_info > input:first-of-type {
+  margin-right: 0.5rem;
+}
+.agree {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.agree > input {
+  margin-right: 0.5rem;
+}
+.agree > span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--other-color);
+  letter-spacing: 0.5px;
+}
+.drop_line > button {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  width: fit-content;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--secound-color);
+  transition: ease 0.3s;
+}
+.drop_line > button:hover {
+  background-color: var(--main-color);
+}
+
+@media screen and (max-width: 1290px) {
+  .history-intro {
+    flex-direction: column;
+  }
+  .history-intro > .image {
+    margin-bottom: 1rem;
+  }
+  .history-intro > .content > p {
+    padding: 0;
+    text-align: left;
+  }
+  .history-intro > .content > h3 {
+    padding: 0;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 890px) {
+  .section__padding {
+    padding: 4rem 4rem;
+  }
+}
+@media screen and (max-width: 790px) {
+  .history_count {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 590px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .section__padding {
+    padding: 2rem 1rem;
+  }
+}
