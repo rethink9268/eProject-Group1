@@ -27,7 +27,7 @@
     <div class="alberto__navBar" id="navbar">
       <div class="alberto__navBar-links">
         <div class="data-dropdown" data-dropdown>
-          <li><a href="#" data-dropdown-link>HOME</a></li>
+          <li><a href="" data-dropdown-link>HOME</a></li>
           <div class="alberto__navBar-links__dropdown">
             <div>
               <a href="" ng-click="gotoCitizenCollection()">PROMASTER COLLECTION</a>
@@ -104,20 +104,17 @@
             <i m-dropdown-arrow class="bx bxs-chevron-down"></i>
           </div>
           <div class="snd-links">
-            <a href="#">PROMASTER COLLECTION</a>
-            <a href="#">SWISS COLLECTION</a>
+            <a href="" ng-click="gotoCitizenCollection()">PROMASTER COLLECTION</a>
+            <a href="" ng-click="GotoEssence()">SWISS COLLECTION</a>
           </div>
         </div>
         <div m-dropdown class="m-navbar-link">
           <div class="pri-link">
-            <a href="">ABOUT</a>
+            <a href="#!about">ABOUT</a>
             <i m-dropdown-arrow class="bx bxs-chevron-down"></i>
           </div>
           <div class="snd-links">
-            <a href="#">OUR HISTORY</a>
-            <a href="#">OUR MISSION</a>
-            <a href="#">TEAM OF PROFESSIONALS</a>
-
+            <a href="" ng-click="GotoBlog()">OUR HISTORY</a>
           </div>
         </div>
         <div m-dropdown class="m-navbar-link">
@@ -126,8 +123,8 @@
             <i m-dropdown-arrow class="bx bxs-chevron-down"></i>
           </div>
           <div class="snd-links">
-            <a href="#">REPAIR</a>
-            <a href="#">APPRAISAL</a>
+            <a href="#!repair">REPAIR</a>
+            <a href="#!appraisal">APPRAISAL</a>
           </div>
         </div>
         <div m-dropdown class="m-navbar-link">
@@ -142,10 +139,10 @@
                 <i m-snd-btn class="bx bxs-chevron-down"></i>
               </div>
               <div class="mobile-dropdown-link">
-                <a href="#">SPORT</a>
-                <a href="#">AUTOMATIC</a>
-                <a href="#">SOLAR</a>
-                <a href="#">DIGITAL</a>
+                <a ng-click="OpenWatch('SPORT')">SPORT</a>
+                <a ng-click="OpenWatch('AUTOMATIC')">AUTOMATIC</a>
+                <a ng-click="OpenWatch('SMART')">SMART</a>
+                <a ng-click="OpenWatch('DIGITAL')">DIGITAL</a>
               </div>
             </div>
             <div m-snd-dropdown class="mobile-dropdown">
@@ -154,10 +151,10 @@
                 <i m-snd-btn class="bx bxs-chevron-down"></i>
               </div>
               <div class="mobile-dropdown-link">
-                <a href="#">CASIO</a>
-                <a href="#">APPLE</a>
-                <a href="#">CITIZEN</a>
-                <a href="#">ROLEX</a>
+                <a ng-click="OpenWatch('OMEGA')">OMEGA</a>
+                <a ng-click="OpenWatch('HUBLOT')">HUBLOT</a>
+                <a ng-click="OpenWatch('CITIZEN')">CITIZEN</a>
+                <a ng-click="OpenWatch('ROLEX')">ROLEX</a>
               </div>
             </div>
             <div m-snd-dropdown class="mobile-dropdown">
@@ -166,10 +163,8 @@
                 <i m-snd-btn class="bx bxs-chevron-down"></i>
               </div>
               <div class="mobile-dropdown-link">
-                <a href="#">CASIO</a>
-                <a href="#">APPLE</a>
-                <a href="#">CITIZEN</a>
-                <a href="#">ROLEX</a>
+                <a ng-click="OpenWatch('CITIZEN')">CITIZEN</a>
+                <a ng-click="OpenWatch('ROLEX')">ROLEX</a>
               </div>
             </div>
           </div>
