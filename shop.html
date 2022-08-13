@@ -27,17 +27,19 @@
           </div>
 
           <div class="sort-list">
-            <select name="orderby">
-              <option value="popularity">Sort by popularity</option>
-              <option value="price">Sort by price: low to high</option>
-              <option value="price-desc">Sort by price: high to low</option>
+            <select name="orderby" ng-model="sortField">
+              <option value="">Choose to sort</option>
+              <option value="name">Sort by name</option>
+              <option value="price">Sort by price</option>
+              <option value="brand">Sort by brand</option>
             </select>
           </div>
 
 
         </div>
         <div class="list-items" id="placeholder">
-          <div item class="item" ng-repeat="data in paginatedItems | filter : search | filter: watchType ">
+          <div item class="item"
+            ng-repeat="data in paginatedItems | filter : search | filter: watchType | orderBy: sortField">
             <img src="{{data.imgS}}" alt="alberto" ng-click="gotoProduct(data.name)" />
             <div class="item-rating">
               <p>-5%</p>
